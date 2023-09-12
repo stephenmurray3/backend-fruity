@@ -1,6 +1,7 @@
 // Importing Express
 require('dotenv').config()
 const express = require('express')
+const cors = require('cors')
 // Create our server by calling express
 const app = express()
 // Has to be above 1024
