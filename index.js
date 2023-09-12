@@ -1,15 +1,17 @@
 // Importing Express
+require('dotenv').config()
 const express = require('express')
 // Create our server by calling express
 const app = express()
 // Has to be above 1024
-const port = 3000 // can then be found at URL localhost:3000 OR localhost:300/home per path
+const port = process.env.PORT;
 
 const fruits = require('./fruits.json');
 
 // Middleware - code that is executed between the request coming in and the response being sent
 // Authentification Middleware
 // express.json
+app.use(cors())
 app.use(express.json())
 
 // Create route - GET route
